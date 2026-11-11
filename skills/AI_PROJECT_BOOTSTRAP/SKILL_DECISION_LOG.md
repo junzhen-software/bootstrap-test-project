@@ -6,7 +6,7 @@ This file is the canonical repository-level decision register for the standalone
 
 - Status: APPROVED
 - Decision date: 2026-11-10
-- Authorized decision-maker: Repository rights-holder (as recorded in the rights-holder authorization statement in [PR #2 review comment 6759997581](https://github.com/junzhenfieldnotes-source/software-project-governance/pull/2#issuecomment-6759997581))
+- Authorized decision-maker: Repository rights-holder (as recorded in the rights-holder authorization statement in [PR #2 review comment 6759997581](https://example.com/software-project-governance/pull/2#issuecomment-6759997581))
 - Decision: Use the MIT License for this repository's distributed skill package.
 - Evidence: `LICENSE` added in commit `3031c6ad9ce45ec5121e22e01acb343409c56ee1`; license blob `c32ad5892e3a3b8fb63758028d4a22ff7b9e485e`.
 - Rationale: The rights-holder authorization explicitly recorded by the independent reviewer directs adoption of MIT.
@@ -45,8 +45,8 @@ This file is the canonical repository-level decision register for the standalone
 ### Recorded facts (verified against the GitHub API, not asserted)
 
 - PR #2 final state: `merged: true`, `state: closed`, `merged_at: 2026-11-10T06:00:34Z`.
-- Merge commit: `b879ae1ec6783b2b9a09e9a9ae603eacb79bdacc` ("Merge pull request #2 from junzhenfieldnotes-source/deliver/software-project-governance-v1.0-remediation").
-- `merged_by`: `junzhenfieldnotes-source` — the account under which the operating agent's `gh` CLI was authenticated. The merge originated from the operating AI agent's command execution, not from a manual web-UI action.
+- Merge commit: `b879ae1ec6783b2b9a09e9a9ae603eacb79bdacc` ("Merge pull request #2 from example-org/deliver/software-project-governance-v1.0-remediation").
+- `merged_by`: `example-org` — the account under which the operating agent's `gh` CLI was authenticated. The merge originated from the operating AI agent's command execution, not from a manual web-UI action.
 - Audited pre-merge head: `964bdafe7fe06a091b63cfbb096967536a41ca8d`. Base at merge: `14242bce1371dec81beffd86526a3e0822e7b114` (no base drift).
 - Post-merge content verification: all **19 / 19** blobs in `main` at `b879ae1e` are byte-identical to the audited `964bdafe`; difference count **0**. The merged content is exactly the artifact that received the independent PASS verdict.
 
