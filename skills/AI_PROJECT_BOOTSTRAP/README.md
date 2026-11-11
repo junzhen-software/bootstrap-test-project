@@ -32,7 +32,7 @@ Directly referencing the shared templates is acceptable only when all contributo
 
 ## Versioning
 
-Use the Git tag/release and full commit SHA as the version identity. The initial content version is recorded in `CHANGELOG.md`; do not rely on non-standard frontmatter fields.
+Use the Git tag/release and full commit SHA as the version identity. The initial content version is recorded in `SKILL_CHANGELOG.md`; do not rely on non-standard frontmatter fields.
 
 ## Safety
 

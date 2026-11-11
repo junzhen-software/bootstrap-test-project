@@ -1,35 +1,36 @@
-# Skill v1.0.1 测试投递副本 — 来源与校验
+# Skill v1.0.1 指定版本随附副本 — 来源与校验
 
-本目录 `skills/AI_PROJECT_BOOTSTRAP/` 是 **Skill v1.0.1 的测试投递副本**，
-按任务书 §6.1「测试材料投递通道」第 2 项制作：
-由固定 Tag 对应内容逐文件复制，公开可读，供被测 AI 获取 Skill 依赖材料。
+本目录 `skills/AI_PROJECT_BOOTSTRAP/` 是指定版本随附副本，按任务书 §6.1
+「测试材料投递通道」第 2 项制作：由固定 Tag 对应内容制作，公开可读，
+供被测 AI 获取 Skill 依赖材料。
 
-> 副本声明：本目录为测试投递副本，**未修改原 Release、未修改原 Tag、
-> 未修改原 Commit 的任何内容**。原 Tag 仍指向其原始 commit。
+> 声明：原 Release、原 Tag、原 Commit 均未被修改，Tag 仍指向其原始 commit。
+> 本副本在复制基础上执行了材料完整性整改（见第 3 节），
+> 因此与 Tag 内 blob 并非逐字节等同，逐文件哈希以下表（本副本实算）为准。
 
 ## 1. 来源
 
 | 项目 | 值 |
 |---|---|
-| 来源仓库 | `junzhen-software/software-project-governance` |
+| 来源仓库 | `example-org/software-project-governance` |
 | 来源 Tag | `v1.0.1`（annotated tag `7bc98eb4933a6d5c67d0cd852d1d9dd14fdeaa1f`） |
 | 目标 Commit | `c0942b2752ebcbccd648e9f754300a8f6c27be56` |
 | Tag 时间 | 2026-11-10T06:06:44Z |
 | 复制方式 | GitHub Git Blobs API 按 blob SHA 原样取字节，不做换行规范化 |
 | 文件数 | 19 |
 
-## 2. 逐文件清单与 SHA-256
+## 2. 逐文件清单与 SHA-256（本副本实算）
 
 | 相对路径（位于 `skills/` 下） | 字节 | SHA-256 |
 |---|---|---|
-| `AI_PROJECT_BOOTSTRAP/CHANGELOG.md` | 1385 | `fb499198a3bf6d136ce8a4b99099cac789e232fa5c2f7707003235019d13dd78` |
-| `AI_PROJECT_BOOTSTRAP/DECISION_LOG.md` | 5924 | `0500ccda77ad34aa513e39ac8d6462692348df670de1d381e78083c860a99230` |
 | `AI_PROJECT_BOOTSTRAP/INITIALIZATION.md` | 467 | `3b6a4235c5cf60a5dd8d9a160d9f697f696ff4a1d396490c2a9c91fe4341d789` |
 | `AI_PROJECT_BOOTSTRAP/LICENSE` | 1081 | `55402782389f201f74eca0d8f180c0860665e0292162a0f1914f8080d999383a` |
 | `AI_PROJECT_BOOTSTRAP/PORTABLE_QUICKSTART.md` | 4791 | `cabc5793575368518b5cb9cb2f34a571d0f5211f8cac70f156f434116c9e060d` |
-| `AI_PROJECT_BOOTSTRAP/README.md` | 2390 | `5327d25a286ca1f38e83e7553f9f05471dc21cfc7693e9f17a79069cdcf17706` |
+| `AI_PROJECT_BOOTSTRAP/README.md` | 2396 | `8013320bb2dc147a2fdc6156a2d1a960c9961cd6489aaa403274864c6cbb281e` |
 | `AI_PROJECT_BOOTSTRAP/SKILL.md` | 17927 | `45c4fd399eb4933693761e22002c5a12174c13bcb9c86bfb068ac838ec2e0d6b` |
-| `AI_PROJECT_BOOTSTRAP/SOURCE_PROVENANCE.md` | 3748 | `d8905ef3fdbedb80c09a9809d1e74f04d98c12e4332e92a2062a7f318f4ad14b` |
+| `AI_PROJECT_BOOTSTRAP/SKILL_CHANGELOG.md` | 1385 | `fb499198a3bf6d136ce8a4b99099cac789e232fa5c2f7707003235019d13dd78` |
+| `AI_PROJECT_BOOTSTRAP/SKILL_DECISION_LOG.md` | 5874 | `da099d173f8313ec4b5ddc3aef8ed44952adff55e5c0e26dd77634ce2740fb11` |
+| `AI_PROJECT_BOOTSTRAP/SOURCE_PROVENANCE.md` | 3694 | `ec0257b2d2d41be6b57d10a4f56f2d09034c687c4df9801e5e5804025d44db4b` |
 | `AI_PROJECT_BOOTSTRAP/examples/PROJECT_STRUCTURE.md` | 1222 | `2c3703084ae58f2591521ec8ecaad966732ca6977a54bee5844e8c60f4ea523a` |
 | `AI_PROJECT_BOOTSTRAP/references/EXECUTION_PLAYBOOK.md` | 3403 | `740e620a31004a1ca664fa11c1bafb97492908984e1a22df148e065cbe4d5085` |
 | `AI_PROJECT_BOOTSTRAP/references/GOVERNANCE_MODEL.md` | 4008 | `680e717c69540a272b173d8239975b62119f2de81c91c0d48281fb848e7c903a` |
@@ -42,15 +43,25 @@
 | `AI_PROJECT_BOOTSTRAP/templates/INCIDENT_TEMPLATE.md` | 1069 | `6415857f96a0c83c9391db0ca5fd6076281dcfd209712f58ad4dfb29c09abd15` |
 | `AI_PROJECT_BOOTSTRAP/templates/TASK_TEMPLATE.md` | 1323 | `7380fbc01673558d64703c5e75e17aa03ef24cb722487583d7ee29e1e4f12fa2` |
 
-## 3. 校验方法
+## 3. 与本副本来源 Tag 的差异（完整性整改）
 
-逐文件复算并与上表比对：
+| 类型 | 对象 | 说明 |
+|---|---|---|
+| 重命名 | `DECISION_LOG.md` → `SKILL_DECISION_LOG.md` | 与项目侧 `docs/DECISION_LOG.md` 存在同编号异义（DEC-003、DEC-004），改名以消除歧义；内容未删改 |
+| 重命名 | `CHANGELOG.md` → `SKILL_CHANGELOG.md` | 避免与项目级变更记录位置混淆；内容未删改 |
+| 引用同步 | `README.md` 1 处、`SOURCE_PROVENANCE.md` 3 处 | 仅更新指向上述两个文件的名，未改其他表述 |
+| 来源标识替换 | `SKILL_DECISION_LOG.md` 3 处、`SOURCE_PROVENANCE.md` 3 处、本文件 1 处 | 真实组织名与私有仓库链接替换为 `example.com` / `example-org` 占位符；Tag 与 Commit 标识保持不变 |
+
+除上述条目外，`SKILL.md`、`references/`、`templates/`、`examples/`、`LICENSE`、
+`INITIALIZATION.md`、`PORTABLE_QUICKSTART.md` 内容与来源 Tag 一致。
+
+## 4. 校验方法
 
 ```
 cd skills/AI_PROJECT_BOOTSTRAP
 find . -type f | sort | xargs sha256sum
 ```
 
-任何一行与上表不一致，即表示副本被改动，不得用于测试投递。
-校验时不要使用会转换换行符的工具（如 `core.autocrlf=true` 的 git 工作树），
-副本全部以 LF 换行存储。
+逐行与第 2 节比对。任何一行不一致，即表示副本被改动，不得用于投递。
+校验时不要使用会转换换行符的工具（`core.autocrlf=true` 的 git 工作树）；
+副本以 LF 换行存储。
